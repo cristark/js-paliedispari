@@ -18,7 +18,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 3em;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 h2 {
@@ -68,7 +68,7 @@ h3 {
   height: 100vh;
   background-color: #004225;
   border: 15px solid #6a3e37;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .even_odd_game p {
@@ -112,6 +112,13 @@ h3 {
 .cpu_box .cpu_text_choice {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+}
+
+.user_box .user_text_choice .choice_container,
+.cpu_box .cpu_text_choice .choice_container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 

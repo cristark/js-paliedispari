@@ -6,8 +6,8 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */
 
 //Nome utente
-/* var userName = prompt('Benvenuto! \n Inserisci il tuo nome per iniziare');
-document.getElementById('user_name').innerHTML = userName; */
+var userName = prompt('Benvenuto! \n Inserisci il tuo nome per iniziare');
+document.getElementById('user_name').innerHTML = userName;
 
 //Variabili iniziali
 var firstChoice, secondChoice, cpufirstChoice, cpusecondChoice;
@@ -16,12 +16,15 @@ var firstChoice, secondChoice, cpufirstChoice, cpusecondChoice;
 var choiceButton = document.getElementById("stamp_choice");
 choiceButton.addEventListener("click", function() {
 
+    //Assegno variabili iniziali su doc HTML
     firstChoice = document.getElementById('option_choice').value;
     secondChoice = document.getElementById('number_choice').value;
 
+    // Stampo scelte su doc HTML
     document.getElementById('opt_choice').innerHTML = firstChoice;
     document.getElementById('numb_choice').innerHTML = secondChoice;
 
+    //Comando per visualizzare pulsante GIOCA
     document.getElementById('play_btn').classList.remove('hidden');
 
 });
@@ -46,7 +49,6 @@ playButton.addEventListener("click", function() {
 
     //Calcolo l'esito della partita e stabilisco se il num. è pari o dispari
     var choiceResult = Number(secondChoice) + Number(cpusecondChoice);
-
     var catResult = choiceResult % 2;
 
     // Converto il risultato in un valore pari o dispari
@@ -70,6 +72,7 @@ playButton.addEventListener("click", function() {
     document.getElementById('final_result').innerHTML = finalMessage;
 });
 
+//!RESET PARAMETRI
 var resetButton = document.getElementById("reset_choice");
 resetButton.addEventListener("click", function() {
 
