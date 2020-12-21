@@ -23,12 +23,13 @@
     <!-- MAIN -->
     <main>
         <!--| Gioco Pari o Dispari -->
-        <section id="even_odd_game" class="show">
+        <section class="even_odd_game">
             <h1>Pari o Dispari</h1>
+            <p>Regole: Scegli un'opzione ed un numero, per confermale premi sul pulsante VAI. Una volta che il software avrà convalidato le tue scelte clicca sul pulsante GIOCA per avviare la partita e conoscerne l'esito. Se vuoi giocare nuovamente con le stesse scelte premi nuovamente sul pulsante GIOCA, altrimenti, per resettare e scegliere nuovi numeri clicca sul pulsante RESET. Buon divertimento!</p>
 
             <!-- Contenitore dati Utente -->
             <div class="user_box">
-                <h3>Player 1</h3>
+                <h3 id="user_name"></h3>
 
                 <!-- Caselle scelta UTENTE -->
                 <div class="user_choice">
@@ -38,6 +39,7 @@
                     </select>
                     <input type="number" name="" id="number_choice" min="0" max="5" required>
                     <button id="stamp_choice">Via</button>
+                    <button id="reset_choice">Reset</button>
                 </div>
 
                 <!-- Visualizzatore scelte Utente -->
@@ -53,7 +55,7 @@
                 </div>
 
                 <!-- Pulsante GIOCA -->
-                <button id="play_btn" class="btn">Gioca</button>
+                <button id="play_btn" class="btn hidden">Gioca</button>
             </div>
 
             <div class="cpu_box">

@@ -5,6 +5,10 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */
 
+//Nome utente
+/* var userName = prompt('Benvenuto! \n Inserisci il tuo nome per iniziare');
+document.getElementById('user_name').innerHTML = userName; */
+
 //Variabili iniziali
 var firstChoice, secondChoice, cpufirstChoice, cpusecondChoice;
 
@@ -17,6 +21,8 @@ choiceButton.addEventListener("click", function() {
 
     document.getElementById('opt_choice').innerHTML = firstChoice;
     document.getElementById('numb_choice').innerHTML = secondChoice;
+
+    document.getElementById('play_btn').classList.remove('hidden');
 
 });
 
@@ -62,4 +68,22 @@ playButton.addEventListener("click", function() {
 
     //Visualizzo risultati su doc HTML
     document.getElementById('final_result').innerHTML = finalMessage;
+});
+
+var resetButton = document.getElementById("reset_choice");
+resetButton.addEventListener("click", function() {
+
+    document.getElementById('option_choice').value = '';
+    document.getElementById('number_choice').value = '';
+
+    document.getElementById('opt_choice').innerHTML = '';
+    document.getElementById('numb_choice').innerHTML = '';
+    document.getElementById('opt_cpu_choice').innerHTML = '';
+    document.getElementById('numb_cpu_choice').innerHTML = '';
+
+    document.getElementById('sum_result').innerHTML = '';
+    document.getElementById('final_result').innerHTML = '';
+
+    document.getElementById('play_btn').classList.add('hidden');
+
 });

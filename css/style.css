@@ -7,6 +7,7 @@
 
 body {
   font-family: sans-serif;
+  color: #fcfaf9;
 }
 
 a {
@@ -14,7 +15,6 @@ a {
 }
 
 h1 {
-  color: #a29587;
   text-align: center;
   text-transform: uppercase;
   font-size: 3em;
@@ -22,7 +22,6 @@ h1 {
 }
 
 h2 {
-  color: #a29587;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.5em;
@@ -30,19 +29,51 @@ h2 {
 }
 
 h3 {
-  color: #a29587;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 1.5em;
 }
 
+.btn {
+  margin: 30px auto 0;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2274a5;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  animation: flashingBtn 0.5s linear alternate infinite;
+}
+
+@keyframes flashingBtn {
+  from {
+    background-color: #2274a5;
+  }
+
+  to {
+    background-color: #f22d2d;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
 /* -Gioco Pari o Dispari */
-#even_odd_game {
+.even_odd_game {
   height: 100vh;
   background-color: #004225;
-  border: 15px solid #2c5774;
+  border: 15px solid #6a3e37;
   padding: 30px 0;
-  color: #a29587;
+}
+
+.even_odd_game p {
+  width: 80%;
+  margin: auto;
 }
 
 .user_box,
@@ -50,7 +81,7 @@ h3 {
   width: 1000px;
   margin: 10px auto;
   padding: 20px 0;
-  border: 3px dotted #092b3d;
+  border: 3px dotted #6a3e37;
 }
 
 .user_box .user_choice {
@@ -63,15 +94,15 @@ h3 {
   width: 200px;
   height: 30px;
   text-align: center;
-  border: 5px solid #0d324d;
+  border: 5px solid #2274a5;
 }
 
 .user_box .user_choice button {
   width: 80px;
   height: 30px;
   text-align: center;
-  background-color: #092b3d;
-  color: #fff;
+  background-color: #2274a5;
+  color: #fcfaf9;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -88,24 +119,13 @@ h3 {
 .cpu_box .cpu_text_choice .choice_box {
   width: 200px;
   height: 40px;
-  background-color: #fff;
-  border: 5px solid #092b3d;
+  background-color: #fcfaf9;
+  border: 5px solid #2274a5;
   border-radius: 10px;
   color: #092b3d;
   text-align: center;
+  text-transform: uppercase;
   line-height: 30px;
   font-size: 1.5em;
   font-weight: bold;
-}
-
-.user_box .btn {
-  margin: 20px auto;
-  width: 150px;
-  display: flex;
-  justify-content: center;
-  background-color: #092b3d;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
 }
