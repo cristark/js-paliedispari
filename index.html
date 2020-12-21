@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Benvenuto in Pari e Dispari</title>
+    <!-- Link FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Link Google Font -->
+
+    <!-- Link foglio Framework Personale (optional) -->
+    
+    <!-- Link foglio di stile personale -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!--| Gioco Pari o Dispari -->
+        <section id="even_odd_game" class="show">
+            <h1>Pari o Dispari</h1>
+
+            <!-- Contenitore dati Utente -->
+            <div class="user_box">
+                <h3>Player 1</h3>
+
+                <!-- Caselle scelta UTENTE -->
+                <div class="user_choice">
+                    <select name="" id="option_choice" required>
+                        <option value="pari">Pari</option>
+                        <option value="dispari">Dispari</option>
+                    </select>
+                    <input type="number" name="" id="number_choice" min="0" max="5" required>
+                    <button id="stamp_choice">Via</button>
+                </div>
+
+                <!-- Visualizzatore scelte Utente -->
+                <div class="user_text_choice">
+                    <div class="choice_container">
+                        <h2>Dichiari:</h2>
+                        <div id="opt_choice" class="choice_box"></div>
+                    </div>
+                    <div class="choice_container">
+                        <h2>Scegli il numero:</h2>
+                        <div id="numb_choice" class="choice_box"></div>
+                    </div>
+                </div>
+
+                <!-- Pulsante GIOCA -->
+                <button id="play_btn" class="btn">Gioca</button>
+            </div>
+
+            <div class="cpu_box">
+                <h3>CPU</h3>
+
+                <!-- Visualizzatore scelte CPU -->
+                <div class="cpu_text_choice">
+                    <div class="choice_container">
+                        <h2>Dichiara:</h2>
+                        <div id="opt_cpu_choice" class="choice_box"></div>
+                    </div>
+                    <div class="choice_container">
+                        <h2>Scegle il numero:</h2>
+                        <div id="numb_cpu_choice" class="choice_box"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="sum_result"></h2>
+            <h1 id="final_result"></h1>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        
+    </footer>
+
+    <!-- Link Script Javascript -->
+    <script src="js/script.js" charset="utf-8"></script>
+</body>
+</html>

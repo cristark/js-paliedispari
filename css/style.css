@@ -1,0 +1,111 @@
+/* | GENERAL | */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  color: black;
+}
+
+h1 {
+  color: #a29587;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3em;
+  margin: 20px 0;
+}
+
+h2 {
+  color: #a29587;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin: 20px 0 10px;
+}
+
+h3 {
+  color: #a29587;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* -Gioco Pari o Dispari */
+#even_odd_game {
+  height: 100vh;
+  background-color: #004225;
+  border: 15px solid #2c5774;
+  padding: 30px 0;
+  color: #a29587;
+}
+
+.user_box,
+.cpu_box {
+  width: 1000px;
+  margin: 10px auto;
+  padding: 20px 0;
+  border: 3px dotted #092b3d;
+}
+
+.user_box .user_choice {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user_box .user_choice select,
+.user_box .user_choice input {
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border: 5px solid #0d324d;
+}
+
+.user_box .user_choice button {
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  background-color: #092b3d;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.user_box .user_text_choice,
+.cpu_box .cpu_text_choice {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.user_box .user_text_choice .choice_box,
+.cpu_box .cpu_text_choice .choice_box {
+  width: 200px;
+  height: 40px;
+  background-color: #fff;
+  border: 5px solid #092b3d;
+  border-radius: 10px;
+  color: #092b3d;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.user_box .btn {
+  margin: 20px auto;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  background-color: #092b3d;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
