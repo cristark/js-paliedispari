@@ -47,25 +47,20 @@ playButton.addEventListener("click", function() {
     document.getElementById('opt_cpu_choice').innerHTML = cpufirstChoice;
     document.getElementById('numb_cpu_choice').innerHTML = cpusecondChoice;
 
-    //Calcolo l'esito della partita e stabilisco se il num. è pari o dispari
-    var choiceResult = Number(secondChoice) + Number(cpusecondChoice);
-    var catResult = choiceResult % 2;
-
-    // Converto il risultato in un valore pari o dispari
-    if (catResult == 0) {
-        choiceResult = 'pari';
-    }   else {
-        choiceResult = 'dispari';
-    }
+    //Utilizzo la funzione per determinare se la somma di due num è pari o dispari
+    var choiceResult = paliDispari(secondChoice, cpusecondChoice);
 
     //Visualizzo risultati su doc HTML
     document.getElementById('sum_result').innerHTML = 'La somma è: ' + choiceResult;
 
     //Stabilisco esito partita in base alla scelta iniziale
     var finalMessage = 'Hai perso';
+    document.getElementById('final_result').style.color = "";
 
     if (choiceResult == firstChoice) {
         finalMessage = 'Hai vinto!';
+    } else {
+        document.getElementById('final_result').style.color = "red";
     }
 
     //Visualizzo risultati su doc HTML
@@ -90,3 +85,21 @@ resetButton.addEventListener("click", function() {
     document.getElementById('play_btn').classList.add('hidden');
 
 });
+
+// - FUNZIONI -
+
+function paliDispari(n1, n2) {
+
+    //Calcolo l'esito della partita e stabilisco se il num. è pari o dispari
+    var nResult = Number(n1) + Number(n2);
+    var catResult = nResult % 2;
+
+    // Converto il risultato in un valore pari o dispari
+    if (catResult == 0) {
+        nResult = 'pari';
+    }   else {
+        nResult = 'dispari';
+    }
+
+    return nResult;
+}
